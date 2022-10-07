@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+:root {
+  --primaryColor: #222e3a;
+  --secondaryColor: #cdb28d;
+  --titleColor: #0e0e0e;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  z-index: 10;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--primaryColor) !important;
+}
+section {
+  height: 100vh;
+  border: 1px dashed white;
+}
+img {
+  width: 100% !important;
+  height: 100% !important;
+}
+/* SWIPER CUSTOM CSS STARTS */
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+  /* transform: translateX(-11%); */
+}
+/* SWIPER CUSTOM CSS ENDS */
+.testimonials-container {
+  min-height: 615px;
+}
+.testimonials-container .title {
+  position: absolute;
+  left: 20%;
+  top: 70px;
+  transform: translateX(-13%);
+}
+.testimonials-container .title h1{
+  font-size: 58px;
+}
+.testimonials-container .swiper-wrapper{
+ margin-top: 15%
+}
+.square-elem {
+  z-index: -1;
+  border: 3px solid rgba(205, 178, 141, 0.27);
+  left: 4%;
+  height: 367px !important;
+  width: 390px !important;
+}
+.review-card .review{
+  height: 175px;
+}
+.review-card .user{
+  /* margin-top: 7rem; */
+}
+
