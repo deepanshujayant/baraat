@@ -57,19 +57,34 @@
             </div>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="text"
-            placeholder="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
       </div>
     </nav>
-    <section class="landing"></section>
+
+    <section class="landing background-tint landing-bkg-container">
+      <div class="d-flex align-items-center h-100">
+        <div style="width: 75%">
+          <div class="title text-white pl-4">
+            <p class="text-uppercase mb-1">baraat brings you</p>
+            <h1 class="mt-0" style="font-size: 88px">
+              Bespoke <br />
+              Caterings
+            </h1>
+            <p class="text-uppercase dynamic-text">test</p>
+          </div>
+        </div>
+        <div
+          class="mb-3 mx-3 text-center landing-container"
+          style="align-self: flex-end; width: 25%"
+        >
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper" style="margin-bottom: 4.5rem"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="story">
       <div class="position-relative bg-beige story-container h-100">
         <div class="container h-100">
@@ -126,6 +141,7 @@
         </div>
       </div>
     </section>
+
     <section class="decor">
       <div class="position-relative decor-container">
         <div class="d-flex">
@@ -134,9 +150,10 @@
           </div>
           <div class="h-100 w-75 decor-content">
             <h1 class="heading text-white">Decor</h1>
+            <br />
             <div class="decor-swiper-container">
               <!-- Swiper -->
-              <div class="swiper ml-4 decor-swiper">
+              <div class="swiper mx-4 decor-swiper">
                 <div class="swiper-wrapper"></div>
               </div>
               <div class="swiper-button-next"></div>
@@ -258,7 +275,58 @@
     </section>
 
     <!-- <section class="instagram"></section> -->
-    <!-- <section class="contact-us"></section> -->
+    <section class="contact-us">
+      <div
+        class="d-flex h-100 contact-container justify-content-between align-items-center"
+      >
+        <div class="content text-white w-50 mx-5">
+          <div class="ml-5 pl-3">
+            <h1>Reach out to us</h1>
+            <p style="font-size: 18px">
+              You will hear from someone within 48 hours. <br />
+              However, if you'd want to speak with someone right away, <br />
+              phone or WhatsApp at 9811114488 or 9560076663.
+            </p>
+          </div>
+        </div>
+        <div class="form w-50 mx-5">
+          <div class="bg-white" style="padding: 4.5rem 0">
+            <form action="" method="get">
+              <div class="form-body">
+                <div class="form-group">
+                  <input type="text" placeholder="Name" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <input type="text" placeholder="Email" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Phone Number"
+                    class="form-control"
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    placeholder="Message..."
+                    name=""
+                    id=""
+                    rows="5"
+                  ></textarea>
+                </div>
+              </div>
+              <br />
+              <div class="form-button">
+                <button type="submit" class="btn w-25 btn-submit">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -273,6 +341,39 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        setTimeout(() => {
+          setSliderBackground();
+        }, 500);
+      });
+
+      function setSliderBackground() {
+        const activeCard = $(".landing-container").find(".swiper-slide-active");
+        const image = activeCard.data("img");
+        console.log(activeCard, image);
+        activeCard.addClass("opaque");
+        $(".landing-bkg-container").css({
+          "background-image": `url('../resources/img/${image}.png')`,
+        });
+      }
+      $(".swiper-button-next, .swiper-button-prev").on("click", function () {
+        if ($(".swiper-slide").hasClass("opaque")) {
+          $(".swiper-slide").removeClass("opaque");
+        }
+        setSliderBackground();
+      });
+    </script>
     <script>
       var testimonialSwiper = new Swiper(".testimonial-swiper", {
         slidesPerView: "auto",
@@ -293,17 +394,37 @@
       });
     </script>
     <script>
+      const DATA = [
+        {
+          text: "Corporate Buffets",
+          image: "landing1",
+        },
+        {
+          text: "Sit Down Dinners",
+          image: "landing2",
+        },
+        {
+          text: "Family Get-togethers",
+          image: "landing3",
+        },
+        {
+          text: "Special Occasions",
+          image: "landing4",
+        },
+      ];
       $(document).ready(function () {
-        createGalleryandDecor("gallery", "images-container", 8);
-        createGalleryandDecor("decor", "decor-swiper-container", 4);
+        populateMedia("landing", "landing-container", 4),
+          populateMedia("gallery", "images-container", 8),
+          populateMedia("decor", "decor-swiper-container", 8);
       });
-      function createGalleryandDecor(type, container, total) {
+      function populateMedia(type, container, total) {
+        console.log("i m called");
         if (type == "gallery") {
           for (let index = 1; index < total + 1; index++) {
             $(`.${container}`).find(".row").append(`
               <div class="col-lg-3 mb-4 col-md-3 col-sm-1">
                 <div class="food-image">
-                  <img src="../resources/img/food${index}.png" alt="IMAGE ${index}" class="img-flui bg-main">
+                  <img src="../resources/img/food${index}.png" alt="IMAGE ${index}" class="img-fluid bg-main">
                 </div>
               </div>
             `);
@@ -313,11 +434,25 @@
             $(`.${container}`).find(".swiper-wrapper").append(`
               <div class="swiper-slide"
                 <div class="food-image">
-                  <img src="../resources/img/decor${index}.png" alt="IMAGE ${index}" class="img-flui bg-main">
+                  <img src="../resources/img/decor${index}.png" alt="IMAGE ${index}" class="img-fluid bg-main">
                 </div>
               </div>
             `);
           }
+        } else if (type == "landing") {
+          DATA.map((slide) => {
+            $(`.${container}`).find(".swiper-wrapper").append(`
+              <div data-img="${slide.image}" class="swiper-slide">
+                <div class="image-holder">
+                  <img
+                    src="../resources/img/${slide.image}.png"
+                    alt="IMAGE ${slide.text}"
+                    class="img-fluid bg-main"
+                  />
+                </div>
+              </div>
+              `);
+          });
         }
       }
     </script>
