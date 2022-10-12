@@ -15,318 +15,1035 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="../css/loader.css" />
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-expand-sm">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button
-        class="navbar-toggler d-lg-none"
-        type="button"
-        data-toggle="collapse"
-        data-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
+    <div class="loader text-center">
+      <svg
+        class="tea"
+        width="57"
+        height="68"
+        viewbox="0 0 37 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="dropdownId"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Dropdown</a
-            >
-            <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="#">Action 1</a>
-              <a class="dropdown-item" href="#">Action 2</a>
+        <path
+          d="M27.0819 17H3.02508C1.91076 17 1.01376 17.9059 1.0485 19.0197C1.15761 22.5177 1.49703 29.7374 2.5 34C4.07125 40.6778 7.18553 44.8868 8.44856 46.3845C8.79051 46.79 9.29799 47 9.82843 47H20.0218C20.639 47 21.2193 46.7159 21.5659 46.2052C22.6765 44.5687 25.2312 40.4282 27.5 34C28.9757 29.8188 29.084 22.4043 29.0441 18.9156C29.0319 17.8436 28.1539 17 27.0819 17Z"
+          stroke="var(--secondary)"
+          stroke-width="2"
+        ></path>
+        <path
+          d="M29 23.5C29 23.5 34.5 20.5 35.5 25.4999C36.0986 28.4926 34.2033 31.5383 32 32.8713C29.4555 34.4108 28 34 28 34"
+          stroke="var(--secondary)"
+          stroke-width="2"
+        ></path>
+        <path
+          id="teabag"
+          fill="var(--secondary)"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M16 25V17H14V25H12C10.3431 25 9 26.3431 9 28V34C9 35.6569 10.3431 37 12 37H18C19.6569 37 21 35.6569 21 34V28C21 26.3431 19.6569 25 18 25H16ZM11 28C11 27.4477 11.4477 27 12 27H18C18.5523 27 19 27.4477 19 28V34C19 34.5523 18.5523 35 18 35H12C11.4477 35 11 34.5523 11 34V28Z"
+        ></path>
+        <path
+          id="steamL"
+          d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke="var(--secondary)"
+        ></path>
+        <path
+          id="steamR"
+          d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13"
+          stroke="var(--secondary)"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+      </svg>
+      <p class="mt-1">Loading...</p>
+    </div>
+    <main style="display: none">
+      <nav
+        class="navbar navbar-fixed-top fixed-top text-white navbar-expand-sm"
+      >
+        <div style="width: 235px">
+          <a class="navbar-brand mr-0" href="#home">
+            <img src="../resources/img/logo.png" alt="" />
+          </a>
+        </div>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav mx-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link links" href="#our-story">Our Story</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link links" href="#decor">Decor</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link links" href="#testimonials">Testimonials</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link mt-3" style="color: #fff; font-size: 18px"
+                >Talk to us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link contact" href="tel:9811114488">
+                <span class="btn-phone">
+                  <img src="../resources/img/phone.png" alt="" />
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link contact"
+                href="https://wa.me/918448558131"
+                target="_blank"
+              >
+                <span>
+                  <img src="../resources/img/whatsapp.png" alt="" />
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section id="home" class="landing background-tint landing-bkg-container">
+        <div class="l-container h-100">
+          <div class="l-content">
+            <div class="title text-white pl-4">
+              <p class="text-uppercase mb-1">baraat brings you</p>
+              <h1 class="mt-0" style="font-size: 88px">
+                Bespoke <br />
+                Caterings
+              </h1>
+              <p class="text-uppercase dynamic-text">test</p>
             </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <section class="landing background-tint landing-bkg-container">
-      <div class="d-flex align-items-center h-100">
-        <div style="width: 75%">
-          <div class="title text-white pl-4">
-            <p class="text-uppercase mb-1">baraat brings you</p>
-            <h1 class="mt-0" style="font-size: 88px">
-              Bespoke <br />
-              Caterings
-            </h1>
-            <p class="text-uppercase dynamic-text">test</p>
+          </div>
+          <div class="mb-3 mx-3 text-center l-thumbnails">
+            <div class="d-flex justify-content-around landing-container"></div>
           </div>
         </div>
-        <div
-          class="mb-3 mx-3 text-center landing-container"
-          style="align-self: flex-end; width: 25%"
-        >
-          <!-- Swiper -->
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper" style="margin-bottom: 4.5rem"></div>
+      </section>
+      <section id="our-story" class="story">
+        <div class="position-relative bg-beige story-container h-100">
+          <div class="container h-100">
+            <div
+              class="d-flex h-100 justify-content-between align-items-center"
+            >
+              <div class="position-relative h-100 story-content">
+                <div class="position-absolute square-elem"></div>
+                <div class="position-absolute story-text">
+                  <h1>Our Story</h1>
+                  <br />
+                  <p>
+                    This is owing to the belief that it is equally important to
+                    us and you. <br />
+                    Therefore, we handle every aspect so you can just have fun.
+                    <br />
+                    <br />
+                    At Baraat Catering we specialize in creating unique, fused
+                    and international menus while providing you with a perfect
+                    and smooth culinary experience, customized to your specific
+                    needs. Our sole ambition is to make your occasion absolutely
+                    beautiful and memorable.
+                    <br /><br />
+                    From formal plated dinners to weddings, crafted and
+                    interactive food stations, all of which is offered at
+                    various price ranges. Our full service catering company got
+                    it covered – so grab a drink and toast your team at an
+                    unforgettable event or party.
+                  </p>
+                </div>
+              </div>
+              <div class="story-image">
+                <div class="position-absolute w-auto">
+                  <img
+                    src="../resources/img/story.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+                <div class="services d-flex justify-content-around">
+                  <div class="text-center">
+                    <img src="../resources/img/service1.png" alt="" />
+                    <p>Catering</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="../resources/img/service2.png" alt="" />
+                    <p>Events</p>
+                  </div>
+                  <div class="text-center">
+                    <img src="../resources/img/service3.png" alt="" />
+                    <p>Gifting</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="decor" class="decor">
+        <div class="position-relative decor-container">
+          <div class="d-flex">
+            <div class="bg-beige w-25 vh-100 position-relative">
+              <div class="square-elem position-absolute"></div>
+            </div>
+            <div class="h-100 w-75 decor-content">
+              <h1 class="heading text-white">Decor</h1>
+              <br />
+              <div class="decor-swiper-container">
+                <!-- Swiper -->
+                <div class="swiper mx-4 decor-swiper">
+                  <div class="swiper-wrapper"></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <div class="d-flex h-100 justify-content-center align-items-center">
+          <div class="container gallery-container">
+            <div class="title-container position-relative">
+              <div class="title">
+                <h1 class="text-white text-center">Food Gallery</h1>
+              </div>
+              <div class="square-elem position-absolute"></div>
+            </div>
+            <div class="images-container">
+              <div class="row"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="testimonials">
+        <div class="d-flex h-100 justify-content-center align-items-center">
+          <div class="container testimonials-container bg-white p-5 w-100">
+            <div class="mt-4 mx-5 position-relative">
+              <div class="square-elem position-absolute"></div>
+              <div class="title text-center bg-white p-2">
+                <h1>Testimonials</h1>
+              </div>
+              <div class="swiper w-100 testimonial-swiper">
+                <div class="swiper-wrapper"></div>
+                <br />
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="text-center">
+            <span
+              ><h2 class="heading mb-5" style="color: #cdb28d">
+                @indulgeatbaraat
+              </h2></span
+            >
+          </div>
+          <div class="swiper instaSlider">
+            <div class="ig_feed_container swiper-wrapper">
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/310920893_646994396813117_1478415736075696154_n.jpg?_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=91RpCBOHfPsAX-WpUlM&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT-YURboiCIzRfcAZmvvn0tVgSy1YGADta2Rh5ArMXDcTA&amp;oe=634B8305"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Blessing of Dussehra
+                    Celebrates the victory of the forces of good over Evil.
+                    Let’s celebrate an auspicious day to begin new things in
+                    life. Happy Dussehra! #dussehra #dussehra #dussehraspecial
+                    #festiveseason #baraat
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/CjUoKWvvZTA/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/310290509_435417418581895_192634297476372026_n.jpg?_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=2QIGN9y8wiYAX-NjB1R&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT_hHfRp92M6l4D5ru7ES-2J2lB3SqK_vl5pB39HDiuIdg&amp;oe=634C3470"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> We are glad to be featured
+                    on UpperCrust! #featured #baraat #indulgeatbaraat #article
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/CjM1NFivVwZ/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.2885-15/308835719_837773877392141_8122028869664971166_n.jpg?_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=-rcQfBoXxyMAX_ZpT4h&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT_Ms9318j7ozcLuKGnKmg_PIRnpVlyU6W2bvOLXW2-Z-g&amp;oe=634ACD34"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Baraat's special Navaratri
+                    Menu. #navratri #navaratri To order, call or WhatsApp
+                    @8448558131
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/CjCtvUDNWkV/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/308881718_632097005212137_4896946549888282306_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=bSbupeNWEuYAX-UoLu3&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT-BY9F7uwfdoUo9zVBkYgDnQoxC3DLu-WNS42TBfjZ5Dw&amp;oe=634C645D"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Here's extending our
+                    heartfelt greetings and best wishes to you on the auspicious
+                    day of Navratri. May you be showered with Maa Durga's
+                    choicest blessings. A very blissful Navratri to you and your
+                    loved ones. Enjoy our Navratri Special Menu, to order, Call
+                    or Whatsapp @ 8448558131 #festiveseason #navratri
+                    #navratrispecial #festivals #kuttukipoori #navratrifood
+                    #baraat
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/Ci_ymAAPkcB/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <video
+                    controls=""
+                    style="width: 100%; display: block !important"
+                  >
+                    <source
+                      src="https://video.cdninstagram.com/v/t50.33967-16/308342307_872651600386402_17975659591291770_n.mp4?_nc_cat=108&amp;vs=620001059765202_1423568052&amp;_nc_vs=HBksFQAYJEdDUHVZQkppV2FjSXJCa0RBSHJUaW1URTNEOEFicV9FQUFBRhUAAsgBABUAGCRHTmExYUJJazBPb2h4dXdEQUFiZkZJRFlaTkZqYnFfRUFBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACaGia6fvsvqQBUCKAJDMywXQB%2FKwIMSbpgYEmRhc2hfYmFzZWxpbmVfMV92MREAdQAA&amp;ccb=1-7&amp;_nc_sid=59939d&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5jbGlwcyJ9&amp;_nc_ohc=L02wykrB0rIAX_d7k2p&amp;_nc_oc=AQlLfYGEbYIMfWe6LbP1PBWEu04l7Xfi0z1MQVShIh4cnkQ6rMcogF5jmADxlhZcVdYaEAHEXKi1heggNeKpL_wH&amp;_nc_ht=video.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT8obtL8Eycj8nJ8xfEedhiMsXpcmYIEO-fU6hozUc12IQ&amp;oe=63473EB8&amp;_nc_rid=7c642895ea"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Since 🌧 rains not
+                    stopping, why not compliment this beautiful weather with
+                    some deliciousness? Amritsar Saag Paneer is Amritsar’s
+                    classic dish made from Mustard &amp; Spinach leaves of curry
+                    mixed with chucks of Paneer with Missi Roti! Head to
+                    #linkinbio to order or just give us a call at 8448558131
+                    #rainyseason #rainyday #baraat #missiroti #saag #saagpaneer
+                    #indianfood #sodelhi #foodtalkindia
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/reel/Ci4SpaKoY0o/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <video
+                    controls=""
+                    style="width: 100%; display: block !important"
+                  >
+                    <source
+                      src="https://video.cdninstagram.com/v/t50.33967-16/10000000_1221277562045771_2373994374039964541_n.mp4?_nc_cat=101&amp;vs=586422839931497_4187609406&amp;_nc_vs=HBksFQAYJEdJQ1dtQUJMQlVMWHZsWUVBSDJMYlNOT0gtSWdicV9FQUFBRhUAAsgBABUAGCRHSnFiVEJJY09NaEVsdGNEQUdLZ3R5V2gxdjBZYnFfRUFBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACa0pfDTh%2FW6PxUCKAJDMywXQFGbtkWhysEYEmRhc2hfYmFzZWxpbmVfMV92MREAdQAA&amp;ccb=1-7&amp;_nc_sid=59939d&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5jbGlwcyJ9&amp;_nc_ohc=VJxVdPI6gH0AX-EBS7J&amp;_nc_ht=video.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT_fLKz7Hnok1Umg--ANqIM2QulIpDm1J8S3QZowWJ0EYA&amp;oe=63473F54&amp;_nc_rid=4ec5e37984"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Such a heartfelt feedback
+                    by @balsamicfinegear #influencer #baraat #indianfood
+                    #celebratefood
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/reel/CipGoXrA8Gw/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/306778503_388678896795792_957914367481996604_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=0-nV8xqMoloAX_WNpcZ&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT8akGqAct1ATxN1Q-xUheAyybvDSecxLEoFBLs6Y1A7TQ&amp;oe=634BBED1"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Baraat is a symbol of
+                    authenticity. It brings you exotic tastes from India's
+                    various regions to your home. We only deliver our finest
+                    foods to you ✨ #chettinad #chettinadu #chickencurry
+                    #sodelhi #foodtalkindia #baraat
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/CimtHxXPRQR/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.2885-15/306886762_819502742825122_3175653323947974630_n.jpg?_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=i2sRAz2YRtwAX-tKkIA&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT-XlFEhxj5r2vqbPCnED4MjEaMRdRUxh5HNhJD9lvD1Vw&amp;oe=634AA3F6"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Fulfil your Friday night
+                    cravings without going heavy on your pocket! Order directly
+                    @8448558131 Also avail on Zomato and Swiggy #Gulati #zomato
+                    #nonveg #swiggy #sodelhi #foodtalkindia #offer #sale #baraat
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/CikhCVfDTdr/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.2885-15/306899664_172427785334860_5754191730849527700_n.jpg?_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=SaSluy9W2vsAX9oNJmK&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT-Ti5W4Se8U0pKzU4UpZPKWJiWFeJoaLYvaHLgaFgu3bA&amp;oe=634ADED8"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> As the name suggests,
+                    Chettinad chicken is originated from Chttinadu district. The
+                    name means "land (nadu) of the Chettiars". Chicken pieces
+                    cooked in flavorful Chettinad spiced sauce are simply a
+                    celebration of taste coming straight from Chennai, and the
+                    spices and aroma you feel will give you a sense of
+                    authenticity. So delicious and exotic! Order Directly
+                    @8448558131 Also avail on. Zomato &amp; Swiggy #zomato
+                    #swiggy #Gulati #sodelhi #foodtalkindia #chettinad #chicken
+                    #chickencurry #nonveg #chennai #chennaifood
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/CifeSAwMCjE/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.2885-15/306372131_751209459510707_383467618545711197_n.jpg?_nc_cat=108&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=cc4wsW2Dm4oAX-nk10f&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT-DSXXaw7NwjV-gTg7aD4iiO2BBS3xaXxMmQlxbv6SXHQ&amp;oe=634C4BAB"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> For the one who is fond of
+                    all the creaminess, have you tried thee Kali Mirch Methi
+                    Malai Paneer? Chefs signature dish using the goodness of
+                    Heavy Cream, Fresh fenugreek Leaves (methi) with chunks of
+                    Paneer and garnished with coarse black pepper. Indulge in
+                    the deliciousness now | Order directly @8448558131 Also,
+                    avail on Zomato &amp; Swiggy #linkinbio
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/Cic4u2msoLD/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/305486097_1020581995250067_2195230624989242812_n.jpg?_nc_cat=103&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=jO7E1mT9b3oAX_RnacY&amp;_nc_oc=AQmwtxYJXF04Lj0RdltZEF4pNiXSTcpr2lZ2-ovi_cr7pmQxYypTjidO5y3Jr7641mf27Dqb2iZJ_E9C4jm0yYvb&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT9-89B54-RH_u2MApz5BarqZt0ZKoxqEBVY5dDcLQ34PA&amp;oe=634C6794"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> May the colour and lights
+                    of Onam fill your home with happiness and joy Have the most
+                    beautiful Onam! Baraat wishes you a Happy Onam! #onam
+                    #onamcelebration #onam2022 #onamspecial #festival
+                    #festivalseason #baraat
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/CiPAZ2CIySR/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <video
+                    controls=""
+                    style="width: 100%; display: block !important"
+                  >
+                    <source
+                      src="https://video.cdninstagram.com/v/t50.33967-16/301536854_1201712857038607_5262270160333718444_n.mp4?_nc_cat=107&amp;vs=5787360604608563_1407364670&amp;_nc_vs=HBksFQAYJEdGWVdfUkVQUC1lVDgwUUVBS3hEMUlMVVZnZEpicV9FQUFBRhUAAsgBABUAGCRHSExOOGhFbHlEaDR0M0lSQUNxT0MxOEU4MWhjYnFfRUFBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACam%2Bd%2BmlOr0PxUCKAJDMywXQBzmZmZmZmYYEmRhc2hfYmFzZWxpbmVfMV92MREAdQAA&amp;ccb=1-7&amp;_nc_sid=59939d&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5jbGlwcyJ9&amp;_nc_ohc=WnMh61c6iIwAX-JY_CZ&amp;_nc_ht=video.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT_QgO0Dh72gY0EHjSI3wcJiVqGf8HP0NNxhSUXOwIgUSA&amp;oe=634736F8&amp;_nc_rid=00b2111727"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Right answers get free
+                    vouchers from us! Comment down your answers :) #baraat
+                    #paratha #foodie #foodblogger #foodstagram #delhirestaurants
+                    #southdelhi
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/reel/Cho3YbGIaYv/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/300516313_120157017306782_9054697098037388051_n.jpg?_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=9_GhLk-oyXEAX_93ahw&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT8DBAJ0DmR5LfSiQ3zo8pnRnZt7QrVc8gcwLCsqB0acTQ&amp;oe=634C7CF7"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Our heart is still
+                    smiling! Thank you for all the love and support, we are
+                    thrilled to see this article. Repost @marryam #foodreview
+                    #baraat #indulgeatbaraat #foodcritic #northindianfood
+                    #foodreview #indiatoday #newspaper
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/ChcBRixI52l/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <video
+                    controls=""
+                    style="width: 100%; display: block !important"
+                  >
+                    <source
+                      src="https://video.cdninstagram.com/v/t50.33967-16/299682566_470013414657290_4485630953391728770_n.mp4?_nc_cat=105&amp;vs=749309166332587_3787145072&amp;_nc_vs=HBksFQAYJEdBYkwzQkVLelo2R2Vhc0JBSUlvYVJLV0tVQV9icV9FQUFBRhUAAsgBABUAGCRHSDYwMlJISlhSYmZTa0FDQUVnTXgyLXdQT0FDYnFfRUFBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACb4wKvv4JTGPxUCKAJDMywXQCRU%2FfO2RaIYEmRhc2hfYmFzZWxpbmVfMV92MREAdQAA&amp;ccb=1-7&amp;_nc_sid=59939d&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5jbGlwcyJ9&amp;_nc_ohc=ItVYgUp0o7cAX94Nzru&amp;_nc_ht=video.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT_HaVZiaViFc35pNkP3gPNVzQFUk9gD83Bd96z_84RU4w&amp;oe=63473032&amp;_nc_rid=93ed4156f2"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Build a good addiction;
+                    try Baraat. #foodie #indianfood #northindianfood #baraat
+                    #cloudkitchen #zomato #swiggy #foodporn #foodlover
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/reel/ChW3oNbgm-X/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/299372244_5363616270382410_5926530689901467147_n.jpg?_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=ICI3muEg1osAX96FU0-&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT8xCPJZU7x03iCs06YXh3_3BujXTNJs0Sosig1g9DO45Q&amp;oe=634B11FF"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Zayekedaar Paneer Tikka!
+                    Cooked to perfection in tikka masala with the right amount
+                    of spices 🤩 Listen to the growl of your stomach and order
+                    now! #linkinbio #paneertikka #paneertikkamasala #paneer
+                    #paneerlove #paneerlover #paneerchilli #zomato #swiggy
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/ChUClURIjRW/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/299629985_436044041616877_4687557074051576524_n.jpg?_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=-X9i1jTjvPMAX_CPSWG&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT8aCL5wRld34TLKHEe5uYOZR4ht4HwikfDCqJZ3c5QTBw&amp;oe=634B8524"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Remember the struggles and
+                    the victories, it was all worth it. Happy Independence Day!
+                    #happyindependenceday🇮🇳 #happyindependenceday
+                    #independenceday
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/ChRL0LBvJpI/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/298984567_1268145040588922_2365124460228396845_n.jpg?_nc_cat=100&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=YcejuECyfIcAX_dHA6h&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT_s5tiSLjkTzi2BlWFq7TwohJOOC1CfuQHO2cfwXfkuEg&amp;oe=634C4A75"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Cheers to the purest bond!
+                    Happy Rakshabandhan! #rakhi #rakshabandhan #baraat #festival
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/ChHPqWqvgSX/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/297869160_430983232295474_1613447564689781311_n.jpg?_nc_cat=111&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=pCfSUl8pxVwAX-WUndL&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT-dagzEIp9WkrS7iVfz3D5Qn3MCmsIG_Nxd-_mzo-62kA&amp;oe=634ABB34"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> #repost @marryam Baraat is
+                    the best South Indian meal I've had in Delhi for years!
+                    (Literally) the Mangalorean Fish Curry is indistinguishable
+                    from the real deal, replete as it is with coriander seeds
+                    for that flavour which you'll only find in the Konkan Coast.
+                    Mutton Sukka is mutton cooked with coconut so that the
+                    sweetness of the coconut is barely a trace and the meat is
+                    juicy and succulent, as it rarely is in Delhi. The Prawn
+                    Balchao is the Mangalorean version, so no lashings of red
+                    chillies ground down with Goan vinegar: this is the
+                    sophisticated cousin, where the prawns are plump and juicy
+                    and the masala is just about flowing enough to eat with
+                    Malabar poratta or Karela (bitter gourd) pulao. If the
+                    knobbly vegetable is your pet hate, do yourself a favour and
+                    order this: some genius hand has kept the flavour the
+                    vegetable barely discernible but none of the bitterness.
+                    Baraat is NOT only about Konkan flavours, for the main
+                    thrust is North Indian treats. But I ordered Konkan food
+                    with little expectations and am over the moon! What I love
+                    the most is the no-plastic packaging: everything was in
+                    bright tin boxes. The parottas were in a leak-proof packet.
+                    Call: Baraat +918448558131 #homedelivery #konkanflavours
+                    #coastalkarnataka #mangalorefood #delhidelivery
+                    #coastalflavours
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/Cg6e4m6Pe2t/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <video
+                    controls=""
+                    style="width: 100%; display: block !important"
+                  >
+                    <source
+                      src="https://video.cdninstagram.com/v/t50.16885-16/295681200_123917493511269_5534261717594015352_n.mp4?_nc_cat=108&amp;vs=940645740665552_391383311&amp;_nc_vs=HBksFQAYJEdMQzhueEZscEM3S3MzQUFBSGdHUE51MXBjMU1idlZCQUFBRhUAAsgBABUAGCRHTjUwbkJGa1pGLUo3Tm9EQU1sNWw3QVdVaEFsYnZWQkFBQUYVAgLIAQAoABgAGwGIB3VzZV9vaWwBMRUAACbSjISK6bHtPxUCKAJDMywXQCJwIMSbpeMYEmRhc2hfYmFzZWxpbmVfMV92MREAdewHAA%3D%3D&amp;ccb=1-7&amp;_nc_sid=59939d&amp;efg=eyJ2ZW5jb2RlX3RhZyI6InZ0c192b2RfdXJsZ2VuLjcyMC5pZ3R2In0%3D&amp;_nc_ohc=a9VU3EydPc4AX8Vos9Z&amp;_nc_ht=video.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT_LK1zRaYGIw5M1FMXh_7U0LP4PhFs5KDZdzeW7GbWQBw&amp;oe=634731B7&amp;_nc_rid=1917f2046d"
+                      type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> BEST ROLL is in the town
+                    now! Presenting Bazaar by Baraat 😋 Bazaar offers
+                    deliciousness From Punjab’s Amritsar to Tamil Nadu’s
+                    Chettinad district. When your order arrives at your
+                    doorstep, there is no ordinary roll waiting for you, but a
+                    years-old recipe and the finest ingredients put together
+                    beautifully to satisfy your gut with the utmost
+                    deliciousness. A roll that is a meal in itself. Don’t
+                    believe us? Maybe try it out for yourself and your taste
+                    buds will tell the truth :) Head over to @foodatbazaar to
+                    order! #foodatbazaar #kathiroll #biryani #biryanilovers
+                    #indianfood #baraat
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/tv/CgbXmOZg0Hn/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide swiper-slide-prev">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/293811010_153530470600750_6453973411342420747_n.jpg?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=vQTlh2KFpI0AX_rVQ66&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT8xElySml5h6NmVeNl0b_SMOGzZFEE5aIiBxefUDRl0BQ&amp;oe=634C5CE5"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> The sensation of burst of
+                    flavours in your mouth comes from.. Our perfectly marinated
+                    mutton pieces cooked to perfection along with freshly made
+                    Malabari Paratha by our experienced chefs. Premium quality
+                    ingredients and freshly made. Indulge in food of India! Try
+                    us now! #linkinbio #malabariparatha #baraat #indulgeatbaraat
+                    #food #foodporn #indianfood #indianfoodlovers
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/CgJlYAZMZs4/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide swiper-slide-active">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/292379876_1006212453416045_4826006156347049751_n.webp?stp=dst-jpg&amp;_nc_cat=106&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=y8MkYYuDH2YAX8Ywwd5&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT-xWcSD-B6NTFjsM0_X0_VRjD1hBvyB9hv-xRDDTPYFCA&amp;oe=634BE67A"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Time to order your happy
+                    meal at your happy place and relish delcetable taste of
+                    mouth watering Indian cuisine dishes . Order in and savour
+                    Baraat’s array of exquisite regional food at baraat. Online
+                    or call us at 844 855 8131 Available on #Zomato and #Swiggy
+                    . . #Baraat #BaraatDelhi #BaraatIndia #IndianFood #InstaGood
+                    #Cravings #FoodService #FoodDelivery #OrderNow #ordernow
+                    #homedelivery #indiancuisine #orderonzomato #orderonlinenow
+                    #orderonswiggy #mutton #tastyfood #yummy #indianfood
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/Cftq29OPh8O/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide swiper-slide-next">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/290744946_560435055618814_571125840260448663_n.webp?stp=dst-jpg&amp;_nc_cat=104&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=APXKRm7wG5gAX8p31Dj&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT_ItdSyxB9r7cqx0DfyYC-Uz-AeVbuQmeeVtqI6toMozQ&amp;oe=634ADCB2"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> We are here with a banging
+                    contest for you all. You just have to tell your favourite
+                    Dish from our Menu. The winner will be getting a free lunch
+                    treat from BARAAT. . . . 1. Follow our page and like this
+                    post 2. Put this post as your story 3. Tag 2 of your foodie
+                    friends in comments section and tell us what's your
+                    favourite Dish from our Menu . . #contestalert
+                    #contestalertindia #contest #participate #giveaway
+                    #contestalertdelhi #BaraatDelhi #BaraatIndia #baraat
+                    #restaurant #delicious #delivery #Swiggy #Zomato
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/CfZEZNpv7Lx/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/289601833_788903368780852_8183305625199875965_n.webp?stp=dst-jpg&amp;_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=A9D6g4cM68QAX-BBiIn&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT9iimYYAxtddjQatlCyc9IgZutaAXYIc28LiIA1PaOsog&amp;oe=634B563A"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Looking for some Wayanad
+                    taste for your taste buds then no need to search it
+                    anywhere. We here at Baraat will serve you the best Pepper
+                    Chicken Wayanad . Order in and savour Baraat’s array of
+                    exquisite regional food at baraat. Online or call us at 844
+                    855 8131 Available on #Zomato and #Swiggy . . #Baraat
+                    #BaraatDelhi #BaraatIndia #IndianFood #InstaGood #Cravings
+                    #FoodService #FoodDelivery #OrderNow #ordernow #homedelivery
+                    #indiancuisine #orderonzomato #orderonlinenow #orderonswiggy
+                    #mutton #tastyfood #yummy #IndianFood
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/CfJmbrBPzXD/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/289184366_8377319512293614_5881898437924717223_n.webp?stp=dst-jpg&amp;_nc_cat=110&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=MdxbG89M73EAX-VLPfJ&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT_dr2guO7_NwzfNb9L7ICr0oNPQNNkzfxV72G33ilOHFQ&amp;oe=634BC2B6"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Treat yourself with the
+                    exotic stuffed Murgh Keema Stuffed Kulcha from your
+                    favourite outlet Baraat . Order in and savour Baraat’s array
+                    of exquisite regional food at baraat. Online or call us at
+                    844 855 8131 Available on #Zomato and #Swiggy . . #Baraat
+                    #BaraatDelhi #BaraatIndia #IndianFood #InstaGood #Cravings
+                    #FoodService #FoodDelivery #OrderNow #ordernow #homedelivery
+                    #indiancuisine #orderonzomato #orderonlinenow #orderonswiggy
+                    #mutton #tastyfood #yummy #IndianFood
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/CfEXaNAPwoO/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="ig_post_container swiper-slide">
+                <div>
+                  <img
+                    src="https://scontent.cdninstagram.com/v/t51.29350-15/288455358_176217634825422_1079831206498221003_n.webp?stp=dst-jpg&amp;_nc_cat=101&amp;ccb=1-7&amp;_nc_sid=8ae9d6&amp;_nc_ohc=GOMoysMexocAX9LHl9U&amp;_nc_ht=scontent.cdninstagram.com&amp;edm=ANo9K5cEAAAA&amp;oh=00_AT_R1PRmgByw1biWOLGhBixbx8wNlOnrhkHNz1Aubz0IEg&amp;oe=634C16CF"
+                  />
+                </div>
+                <div class="ig_post_details">
+                  <div>
+                    <strong>@indulgeatbaraat</strong> Well cooked rice with
+                    juicy pieces of mutton melting in your mouth and treating
+                    your taste buds with the delicious flavour . Order in and
+                    savour Baraat’s array of exquisite regional food at baraat.
+                    Online or call us at 844 855 8131 Available on #Zomato and
+                    #Swiggy . . #Baraat #BaraatDelhi #BaraatIndia #IndianFood
+                    #InstaGood #Cravings #FoodService #FoodDelivery #OrderNow
+                    #ordernow #homedelivery #indiancuisine #orderonzomato
+                    #orderonlinenow #orderonswiggy #mutton #tastyfood #yummy
+                    #IndianFood
+                  </div>
+                  <div class="ig_view_link">
+                    <a
+                      href="https://www.instagram.com/p/Ce8piGwvDPc/"
+                      target="_blank"
+                      >View on Instagram</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="story">
-      <div class="position-relative bg-beige story-container h-100">
-        <div class="container h-100">
-          <div class="d-flex h-100 justify-content-between align-items-center">
-            <div class="position-relative h-100 story-content">
-              <div class="position-absolute square-elem"></div>
-              <div class="position-absolute story-text">
-                <h1>Our Story</h1>
+      </section>
+      <section class="contact-us">
+        <div
+          class="d-flex h-100 contact-container justify-content-between align-items-center"
+        >
+          <div class="content text-white w-50 mx-5">
+            <div class="ml-5 pl-3">
+              <h1>Reach out to us</h1>
+              <p style="font-size: 18px">
+                You will hear from someone within 48 hours. <br />
+                However, if you'd want to speak with someone right away, <br />
+                phone or WhatsApp at 9811114488 or 9560076663.
+              </p>
+            </div>
+          </div>
+          <div class="form w-50 mx-5">
+            <div class="bg-white" style="padding: 4.5rem 0">
+              <form action="" method="get">
+                <div class="form-body">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      placeholder="Email"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      placeholder="Phone Number"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      placeholder="Message..."
+                      name=""
+                      id=""
+                      rows="5"
+                    ></textarea>
+                  </div>
+                </div>
                 <br />
-                <p>
-                  This is owing to the belief that it is equally important to us
-                  and you. <br />
-                  Therefore, we handle every aspect so you can just have fun.
-                  <br />
-                  <br />
-                  At Baraat Catering we specialize in creating unique, fused and
-                  international menus while providing you with a perfect and
-                  smooth culinary experience, customized to your specific
-                  needs. Our sole ambition is to make your occasion absolutely
-                  beautiful and memorable.
-                  <br /><br />
-                  From formal plated dinners to weddings, crafted and
-                  interactive food stations, all of which is offered at various
-                  price ranges. Our full service catering company got it covered
-                  – so grab a drink and toast your team at an unforgettable
-                  event or party.
-                </p>
-              </div>
-            </div>
-            <div class="story-image">
-              <div class="position-absolute w-auto">
-                <img
-                  src="../resources/img/story.png"
-                  class="img-fluid"
-                  alt=""
-                />
-              </div>
-              <div class="services d-flex justify-content-around">
-                <div class="text-center">
-                  <img src="../resources/img/service1.png" alt="" />
-                  <p>Catering</p>
+                <div class="form-button">
+                  <button type="submit" class="btn w-25 btn-submit">
+                    Submit
+                  </button>
                 </div>
-                <div class="text-center">
-                  <img src="../resources/img/service2.png" alt="" />
-                  <p>Events</p>
-                </div>
-                <div class="text-center">
-                  <img src="../resources/img/service3.png" alt="" />
-                  <p>Gifting</p>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <footer class="footer bg-beige p-2">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center w-100"
+        >
+          <div class="d-flex">
+            <a
+              class="nav-link contact"
+              href="https://www.facebook.com/indulgeatbaraat"
+            >
+              <span class="btn-social">
+                <img src="../resources/img/fb.png" alt="" />
+              </span>
+            </a>
+            <a
+              class="nav-link contact"
+              href="https://www.instagram.com/indulgeatbaraat"
+            >
+              <span class="btn-social">
+                <img src="../resources/img/insta.png" alt="" />
+              </span>
+            </a>
+          </div>
+          <div>
+            <p>© 2022 Baraat - All Right Reserved</p>
+          </div>
+        </div>
+      </footer>
+    </main>
 
-    <section class="decor">
-      <div class="position-relative decor-container">
-        <div class="d-flex">
-          <div class="bg-beige w-25 vh-100 position-relative">
-            <div class="square-elem position-absolute"></div>
-          </div>
-          <div class="h-100 w-75 decor-content">
-            <h1 class="heading text-white">Decor</h1>
-            <br />
-            <div class="decor-swiper-container">
-              <!-- Swiper -->
-              <div class="swiper mx-4 decor-swiper">
-                <div class="swiper-wrapper"></div>
-              </div>
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="gallery">
-      <div class="d-flex h-100 justify-content-center align-items-center">
-        <div class="container gallery-container">
-          <div class="title-container position-relative">
-            <div class="title">
-              <h1 class="text-white text-center">Food Gallery</h1>
-            </div>
-            <div class="square-elem position-absolute"></div>
-          </div>
-          <div class="images-container">
-            <div class="row"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials">
-      <div class="d-flex h-100 justify-content-center align-items-center">
-        <div class="container testimonials-container bg-white p-5 w-100">
-          <div class="mt-4 mx-5 position-relative">
-            <div class="square-elem position-absolute"></div>
-            <div class="title text-center bg-white p-2">
-              <h1>Testimonials</h1>
-            </div>
-            <div class="swiper w-100 testimonial-swiper">
-              <div class="swiper-wrapper">
-                <div
-                  class="swiper-slide review-card bg-white py-5 ml-5 px-2 w-75"
-                >
-                  <div class="review">
-                    <p>
-                      Baraat did an absolute outstanding sit down Chettinad
-                      dinner for us. It was such a success that we are planning
-                      more of these intimate dinners. Thanks Vipul !!
-                    </p>
-                  </div>
-                  <div class="user">
-                    <h6><strong>Mrs Sukhmani Bedi</strong></h6>
-                    <p>DLF Chattarpur Farms</p>
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide review-card bg-white py-5 ml-5 px-2 w-75"
-                >
-                  <div class="review">
-                    <p>
-                      Baraat did an absolute outstanding sit down Chettinad
-                      dinner for us. It was such a success that we are planning
-                      more of these intimate dinners. Thanks Vipul !!
-                    </p>
-                  </div>
-                  <div class="user">
-                    <h6><strong>Mrs Sukhmani Bedi</strong></h6>
-                    <p>DLF Chattarpur Farms</p>
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide review-card bg-white py-5 ml-5 px-2 w-75"
-                >
-                  <div class="review">
-                    <p>
-                      Baraat did an absolute outstanding sit down Chettinad
-                      dinner for us. It was such a success that we are planning
-                      more of these intimate dinners. Thanks Vipul !!
-                    </p>
-                  </div>
-                  <div class="user">
-                    <h6><strong>Mrs Sukhmani Bedi</strong></h6>
-                    <p>DLF Chattarpur Farms</p>
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide review-card bg-white py-5 ml-5 px-2 w-75"
-                >
-                  <div class="review">
-                    <p>
-                      Baraat did an absolute outstanding sit down Chettinad
-                      dinner for us. It was such a success that we are planning
-                      more of these intimate dinners. Thanks Vipul !!
-                    </p>
-                  </div>
-                  <div class="user">
-                    <h6><strong>Mrs Sukhmani Bedi</strong></h6>
-                    <p>DLF Chattarpur Farms</p>
-                  </div>
-                </div>
-                <div
-                  class="swiper-slide review-card bg-white py-5 ml-5 px-2 w-75"
-                >
-                  <div class="review">
-                    <p>
-                      Baraat did an absolute outstanding sit down Chettinad
-                      dinner for us. It was such a success that we are planning
-                      more of these intimate dinners. Thanks Vipul !!
-                    </p>
-                  </div>
-                  <div class="user">
-                    <h6><strong>Mrs Sukhmani Bedi</strong></h6>
-                    <p>DLF Chattarpur Farms</p>
-                  </div>
-                </div>
-              </div>
-              <br />
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- <section class="instagram"></section> -->
-    <section class="contact-us">
-      <div
-        class="d-flex h-100 contact-container justify-content-between align-items-center"
-      >
-        <div class="content text-white w-50 mx-5">
-          <div class="ml-5 pl-3">
-            <h1>Reach out to us</h1>
-            <p style="font-size: 18px">
-              You will hear from someone within 48 hours. <br />
-              However, if you'd want to speak with someone right away, <br />
-              phone or WhatsApp at 9811114488 or 9560076663.
-            </p>
-          </div>
-        </div>
-        <div class="form w-50 mx-5">
-          <div class="bg-white" style="padding: 4.5rem 0">
-            <form action="" method="get">
-              <div class="form-body">
-                <div class="form-group">
-                  <input type="text" placeholder="Name" class="form-control" />
-                </div>
-                <div class="form-group">
-                  <input type="text" placeholder="Email" class="form-control" />
-                </div>
-                <div class="form-group">
-                  <input
-                    type="text"
-                    placeholder="Phone Number"
-                    class="form-control"
-                  />
-                </div>
-                <div class="form-group">
-                  <textarea
-                    class="form-control"
-                    placeholder="Message..."
-                    name=""
-                    id=""
-                    rows="5"
-                  ></textarea>
-                </div>
-              </div>
-              <br />
-              <div class="form-button">
-                <button type="submit" class="btn w-25 btn-submit">
-                  Submit
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -339,49 +1056,49 @@
     ></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
+      var swiper = new Swiper(".instaSlider", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+
+        speed: 2000,
+        autoplay: {
+          delay: 2000,
+        },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        setTimeout(() => {
-          setSliderBackground();
-        }, 500);
-      });
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
 
-      function setSliderBackground() {
-        const activeCard = $(".landing-container").find(".swiper-slide-active");
-        const image = activeCard.data("img");
-        console.log(activeCard, image);
-        activeCard.addClass("opaque");
-        $(".landing-bkg-container").css({
-          "background-image": `url('../resources/img/${image}.png')`,
-        });
-      }
-      $(".swiper-button-next, .swiper-button-prev").on("click", function () {
-        if ($(".swiper-slide").hasClass("opaque")) {
-          $(".swiper-slide").removeClass("opaque");
-        }
-        setSliderBackground();
+          500: {
+            slidesPerView: 2,
+          },
+          868: {
+            slidesPerView: 3,
+          },
+        },
       });
-    </script>
-    <script>
       var testimonialSwiper = new Swiper(".testimonial-swiper", {
         slidesPerView: "auto",
         centeredSlides: true,
-        spaceBetween: 60,
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
+        },
+        breakpoints: {
+          992: {
+            spaceBetween: 85,
+          },
+          1920: {
+            spaceBetween: 85,
+          },
+          2560: {
+            spaceBetween: 300,
+          },
         },
       });
       var decorSwiper = new Swiper(".decor-swiper", {
@@ -398,24 +1115,66 @@
         {
           text: "Corporate Buffets",
           image: "landing1",
+          thumbnail: "landingThumbnail1",
         },
         {
           text: "Sit Down Dinners",
           image: "landing2",
+          thumbnail: "landingThumbnail2",
         },
         {
           text: "Family Get-togethers",
           image: "landing3",
+          thumbnail: "landingThumbnail3",
         },
         {
           text: "Special Occasions",
           image: "landing4",
+          thumbnail: "landingThumbnail4",
+        },
+      ];
+      const TESTIMONIALS = [
+        {
+          name: "Mrs. Sukhmani Bedi",
+          address: "DLF Chattarpur Farms",
+          review:
+            "Baraat did an absolute outstanding sit down Chettinad dinner for us. It was such a success that we are planning more of these intimate dinners. Thanks Vipul !!",
+        },
+        {
+          name: "Mrs. Sonali Kapoor",
+          address: "Aurangzeb Lane",
+          review:
+            "Having baraat cater at home was like a dream. Everything from the look of the dish  to the  taste was spectacular my guest really  enjoyed each and every dish Thank u Barrat for  specially preparing the dishes as per my liking and adding so much flavour to it",
+        },
+        {
+          name: "Mrs. Garima Kohli",
+          address: "New Friends Colony",
+          review:
+            "Thank you and your team for the incredible catering at our dinner. The appetizers and entree were spectacular. We were so pleased with the attention to detail and the exemplary service of your staff. Baraat is a natural choice for us for all our parties.",
+        },
+        {
+          name: "Mrs. Neoma Gupta",
+          address: "Westend Green Farms",
+          review:
+            "Baraat by far the best Indian food and the richest flavours . We used baraat as caterers for two events at our house .. the food the service the artistic representation of the food was spectacular . From the kids to the elderly the food was enjoyed and appreciated by all ! Can’t wait to eat again !",
+        },
+        {
+          name: "Mrs. Nidhi Bagla",
+          address: "Kalkaji",
+          review:
+            "Thank you so much for an amazing party..food was really appreciated..",
         },
       ];
       $(document).ready(function () {
-        populateMedia("landing", "landing-container", 4),
-          populateMedia("gallery", "images-container", 8),
-          populateMedia("decor", "decor-swiper-container", 8);
+        setTimeout(() => {
+          $(".loader").hide();
+          $("main").show();
+        }, 1500);
+        populateMedia("landing", "landing-container", 4);
+        populateMedia("gallery", "images-container", 8);
+        populateMedia("decor", "decor-swiper-container", 8);
+        populateMedia("testimonials", "testimonial-swiper", 4);
+        initializeLanding();
       });
       function populateMedia(type, container, total) {
         console.log("i m called");
@@ -441,11 +1200,11 @@
           }
         } else if (type == "landing") {
           DATA.map((slide) => {
-            $(`.${container}`).find(".swiper-wrapper").append(`
-              <div data-img="${slide.image}" class="swiper-slide">
+            $(`.${container}`).append(`
+              <div data-img="${slide.image}" data-text="${slide.text}" class="thumbnail">
                 <div class="image-holder">
                   <img
-                    src="../resources/img/${slide.image}.png"
+                    src="../resources/img/${slide.thumbnail}.png"
                     alt="IMAGE ${slide.text}"
                     class="img-fluid bg-main"
                   />
@@ -453,8 +1212,53 @@
               </div>
               `);
           });
+        } else if (type == "testimonials") {
+          TESTIMONIALS.map((el) => {
+            $(`.${container}`).find(".swiper-wrapper").append(`
+            <div class="swiper-slide review-card bg-white py-5 ml-5 px-2 w-75">
+              <div class="review">
+                <p>
+                  ${el.review}
+                </p>
+              </div>
+              <div class="user">
+                <h6><strong>${el.name}</strong></h6>
+                <p>${el.address}</p>
+              </div>
+            </div>
+            `);
+          });
         }
       }
+      function initializeLanding() {
+        const activeCard = $(".landing-container .thumbnail:first-child");
+        console.log(activeCard);
+        activeCard.addClass("active");
+        const image = activeCard.data("img");
+        const text = activeCard.data("text");
+        $(".landing-bkg-container").css({
+          "background-image": `url('../resources/img/${image}.png')`,
+        });
+        $(".dynamic-text").text(text);
+      }
+      $(document).on("click", ".thumbnail", function () {
+        $(".landing-container").find(".thumbnail").removeClass("active");
+        $(this).addClass("active");
+        const image = $(this).data("img");
+        const text = $(this).data("text");
+        $(".landing-bkg-container").css({
+          "background-image": `url('../resources/img/${image}.png')`,
+        });
+        $(".dynamic-text").text(text);
+      });
+    </script>
+    <script>
+      $(function () {
+        $(document).scroll(function () {
+          var $nav = $(".navbar-fixed-top");
+          $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+      });
     </script>
   </body>
 </html>
