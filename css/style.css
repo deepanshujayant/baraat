@@ -373,7 +373,7 @@ input.form-control {
   .gallery-container > .m-images-container .images1,
   .gallery-container > .m-images-container .images2 {
     display: flex;
-    width: 100vw !important;
+    width: 160vw !important;
   }
   .gallery-container > .m-images-container .images1 .food-image,
   .gallery-container > .m-images-container .images2 .food-image {
@@ -542,7 +542,7 @@ input.form-control {
   .gallery-container > .m-images-container .images1,
   .gallery-container > .m-images-container .images2 {
     display: flex;
-    width: 100vw !important;
+    width: 160vw !important;
   }
   .gallery-container > .m-images-container .images1 .food-image,
   .gallery-container > .m-images-container .images2 .food-image {
