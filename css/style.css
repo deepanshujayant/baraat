@@ -77,10 +77,10 @@ input.form-control {
   -webkit-box-orient: vertical;
   /* display: block; */
 }
-.ig_post_details .ig_view_link{
+.ig_post_details .ig_view_link {
   margin-top: 3rem;
 }
-.ig_post_details .ig_view_link a{
+.ig_post_details .ig_view_link a {
   font-family: "Playfair Display", serif !important;
   color: var(--primaryColor);
 }
@@ -110,16 +110,12 @@ input.form-control {
 .btn-social {
   display: block;
   padding: 10px;
-  /* width: 52px; */
-  /* height: 53px; */
   border: 1px solid var(--primaryColor);
   border-radius: 50%;
 }
 .btn-phone {
   display: block;
   padding: 12px;
-  /* width: 52px; */
-  /* height: 53px; */
   border: 1px solid white;
   border-radius: 50%;
 }
@@ -255,20 +251,201 @@ input.form-control {
 .review-card .review {
   height: 175px;
 }
-.review-card .user {
-  /* margin-top: 7rem; */
-}
 
 @media only screen and (max-width: 600px) {
-  section {
-    display: none;
+  .d-only {
+    display: none !important;
+  }
+  .contact:hover {
+    transform: scale(1) !important;
+  }
+  .nav-link img {
+    width: min-content !important;
+    height: auto !important;
+  }
+  .btn-phone {
+    width: 52px;
+    height: 53px;
+  }
+  nav {
+    background-color: var(--secondaryColor) !important;
+  }
+  .navbar-toggler {
+    background-color: var(--secondaryColor) !important;
+  }
+  h1 {
+    width: 100%;
+    font-size: 48px !important;
+  }
+  .l-container {
+    display: flex;
+    justify-content: space-evenly !important;
+    flex-direction: column !important;
+  }
+  .l-content {
+    width: 100%;
+  }
+  .l-thumbnails {
+    width: 100vw !important;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  .square-elem {
+    display: none !important;
+  }
+  .landing {
+    height: 100vh;
+    margin: 0 0 3rem;
+    /* border: 1px dashed white; */
+  }
+  .gallery {
+    margin: 2rem 0 3rem;
+    min-height: auto;
+    width: 100%;
+  }
+  .decor {
+    width: 100% !important;
+    margin-bottom: 3rem;
+  }
+  .story {
+    margin: 2rem 0 3rem;
+    height: 100vh;
+  }
+  .testimonials {
+    margin: 2rem 0 3rem;
+    height: max-content;
+  }
+  .instagram {
+    margin: 2rem 0 3rem;
+  }
+  .contact-us {
+    margin: 2rem 0 3rem;
+  }
+  .story-container .container > .d-flex {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .story-container .story-content {
+    width: 100%;
+    height: 75% !important;
+  }
+  .story-container .story-image {
+    display: flex;
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 25% !important;
+  }
+  .story-container .story-image > .position-absolute {
+    position: static !important;
+    width: 30% !important;
+    height: auto;
+    margin-top: auto !important;
+  }
+  .story-container .story-image > .position-absolute img {
+    margin-top: auto !important;
+    /* width: 125px !important;
+    height: 125px !important; */
+  }
+  .story-container .story-image > .services {
+    width: 70%;
+    margin-top: auto !important;
+  }
+
+  .decor-container .vh-100 {
+    height: 65vh !important;
+  }
+  .decor-content .heading {
+    margin-left: 1.5rem;
+    width: 75% !important;
+  }
+
+  .gallery-container .title-container {
+    padding-top: 0 !important;
+  }
+
+  .gallery-container .title-container > .title {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+  .gallery-container > .m-images-container {
+    overflow: auto !important;
+  }
+  .gallery-container > .m-images-container .images1,
+  .gallery-container > .m-images-container .images2 {
+    display: flex;
+    width: 300vw !important;
+  }
+  .gallery-container > .m-images-container .images1 .food-image,
+  .gallery-container > .m-images-container .images2 .food-image {
+    width: 150px !important;
+    height: 195px !important;
+    margin: auto 1rem;
+  }
+
+  .testimonials-container {
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+  .testimonials-container > div {
+    margin: auto !important;
+  }
+
+  .review-card .review {
+    height: 250px !important;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-container .w-50 {
+    width: 100% !important;
+  }
+  .contact-container .mx-5 {
+    margin: 0 !important;
+    background-color: #fff !important;
+    color: var(--primaryColor) !important;
+  }
+  .contact-container .content {
+    padding: 1rem !important;
+  }
+  .contact-container .content > div h1 {
+    font-size: 36px !important;
+  }
+  .contact-container .content > div p {
+    font-size: 14px !important;
+  }
+  .contact-container .form {
+    padding: 1rem !important;
+  }
+  .contact-container .form > div {
+    padding: 2rem 1rem !important;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) and (max-width: 992px) {
-  section {
-    display: none;
+  .landing {
+    height: 100vh;
+    margin: 0 0 10rem;
+    /* border: 1px dashed white; */
+  }
+  .gallery {
+    margin: 2rem 0 10rem;
+    min-height: 100vh;
+  }
+  .story {
+    margin: 2rem 0 10rem;
+    height: 80vh;
+  }
+  .testimonials {
+    margin: 2rem 0 10rem;
+    height: 100vh;
+  }
+  .instagram {
+    margin: 2rem 0 10rem;
+  }
+  .contact-us {
+    margin: 2rem 0 10rem;
   }
 }
 
@@ -290,6 +467,9 @@ input.form-control {
   .testimonials {
     margin: 2rem 0 10rem;
     height: 100vh;
+  }
+  .instagram {
+    margin: 2rem 0 10rem;
   }
   .contact-us {
     margin: 2rem 0 10rem;
@@ -370,6 +550,29 @@ input.form-control {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1920px) {
+  .landing {
+    height: 100vh;
+    margin: 0 0 10rem;
+    /* border: 1px dashed white; */
+  }
+  .gallery {
+    margin: 2rem 0 5rem;
+    min-height: 100vh;
+  }
+  .story {
+    margin: 2rem 0 5rem;
+    height: 80vh;
+  }
+  .testimonials {
+    margin: 2rem 0 5rem;
+    height: 100vh;
+  }
+  .instagram {
+    margin: 2rem 0 5rem;
+  }
+  .contact-us {
+    margin: 2rem 0 5rem;
+  }
   .story-container .square-elem {
     border: 3px solid rgba(34, 46, 58, 0.3);
     height: 80%;

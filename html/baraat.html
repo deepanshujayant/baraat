@@ -66,7 +66,7 @@
     </div>
     <main style="display: none">
       <nav
-        class="navbar navbar-fixed-top fixed-top text-white navbar-expand-sm"
+        class="navbar navbar-fixed-top fixed-top text-white navbar-dark navbar-expand-sm"
       >
         <div style="width: 235px">
           <a class="navbar-brand mr-0" href="#home">
@@ -135,7 +135,7 @@
               <p class="text-uppercase dynamic-text">test</p>
             </div>
           </div>
-          <div class="mb-3 mx-3 text-center l-thumbnails">
+          <div class="mb-3 mx-lg-3 text-center l-thumbnails">
             <div class="d-flex justify-content-around landing-container"></div>
           </div>
         </div>
@@ -230,7 +230,15 @@
               </div>
               <div class="square-elem position-absolute"></div>
             </div>
-            <div class="images-container">
+            <div class="m-images-container m-only">
+              <br>
+              <div class="images1"></div>
+            </div>
+            <div class="m-images-container m-only">
+              <br />
+              <div class="images2"></div>
+            </div>
+            <div class="images-container d-only">
               <div class="row"></div>
             </div>
           </div>
@@ -254,8 +262,8 @@
           </div>
         </div>
       </section>
-
-      <section>
+      <!-- INSTAGRAM CODE -->
+      <section class="instagram">
         <div class="container">
           <div class="text-center">
             <span
@@ -960,7 +968,7 @@
           class="d-flex h-100 contact-container justify-content-between align-items-center"
         >
           <div class="content text-white w-50 mx-5">
-            <div class="ml-5 pl-3">
+            <div class="ml-lg-5 pl-lg-3">
               <h1>Reach out to us</h1>
               <p style="font-size: 18px">
                 You will hear from someone within 48 hours. <br />
@@ -1006,7 +1014,7 @@
                 </div>
                 <br />
                 <div class="form-button">
-                  <button type="submit" class="btn w-25 btn-submit">
+                  <button type="submit" class="btn w-lg-25 btn-submit">
                     Submit
                   </button>
                 </div>
@@ -1060,7 +1068,6 @@
       var swiper = new Swiper(".instaSlider", {
         slidesPerView: 3,
         spaceBetween: 20,
-
         speed: 2000,
         autoplay: {
           delay: 2000,
@@ -1090,6 +1097,9 @@
           clickable: true,
         },
         breakpoints: {
+          0:{
+            spaceBetween: 100,
+          },
           992: {
             spaceBetween: 85,
           },
@@ -1107,6 +1117,19 @@
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            slidesPerColumn: 2,
+          },
+
+          500: {
+            slidesPerView: 2,
+          },
+          868: {
+            slidesPerView: 3,
+          },
         },
       });
     </script>
@@ -1172,6 +1195,7 @@
         }, 1500);
         populateMedia("landing", "landing-container", 4);
         populateMedia("gallery", "images-container", 8);
+        populateMedia("gallery", "m-images-container", 8);
         populateMedia("decor", "decor-swiper-container", 8);
         populateMedia("testimonials", "testimonial-swiper", 4);
         initializeLanding();
@@ -1186,6 +1210,20 @@
                   <img src="../resources/img/food${index}.png" alt="IMAGE ${index}" class="img-fluid bg-main">
                 </div>
               </div>
+            `);
+          }
+          for (let index = 1; index < total / 2 + 1; index++) {
+            $(`.${container}`).find(".images1").append(`
+                <div class="food-image">
+                  <img src="../resources/img/food${index}.png" alt="IMAGE ${index}" class="img-fluid bg-main">
+                </div>
+            `);
+          }
+          for (let index = total / 2 + 1; index < total + 1; index++) {
+            $(`.${container}`).find(".images2").append(`
+                <div class="food-image">
+                  <img src="../resources/img/food${index}.png" alt="IMAGE ${index}" class="img-fluid bg-main">
+                </div>
             `);
           }
         } else if (type == "decor") {
@@ -1215,7 +1253,7 @@
         } else if (type == "testimonials") {
           TESTIMONIALS.map((el) => {
             $(`.${container}`).find(".swiper-wrapper").append(`
-            <div class="swiper-slide review-card bg-white py-5 ml-5 px-2 w-75">
+            <div class="swiper-slide review-card bg-white py-lg-5 ml-lg-5 px-lg-2 w-75">
               <div class="review">
                 <p>
                   ${el.review}
