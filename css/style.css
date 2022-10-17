@@ -49,7 +49,7 @@ input.form-control {
 }
 
 .background-tint {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
@@ -602,22 +602,22 @@ input.form-control {
     /* border: 1px dashed white; */
   }
   .gallery {
-    margin: 2rem 0 10rem;
+    margin: 2rem 0 5rem;
     min-height: 100vh;
   }
   .story {
-    margin: 2rem 0 10rem;
+    margin: 2rem 0 5rem;
     height: 80vh;
   }
   .testimonials {
-    margin: 2rem 0 10rem;
+    margin: 2rem 0 5rem;
     height: 100vh;
   }
   .instagram {
-    margin: 2rem 0 10rem;
+    margin: 2rem 0 5rem;
   }
   .contact-us {
-    margin: 2rem 0 10rem;
+    margin: 2rem 0 5rem;
   }
   .landing-container .image-holder {
     height: 303px !important;
