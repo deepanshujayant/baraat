@@ -488,10 +488,20 @@ input.form-control {
   .contact-container .form > div {
     padding: 2rem 1rem !important;
   }
+  .btn-pdf{
+    color: var(--primaryColor) !important;
+    border-radius: 0% !important;
+    border: 1px solid var(--primaryColor) !important;
+  }
 }
 @media only screen and (min-width: 600px) and (max-width: 992px) {
   .d-only {
     display: none !important;
+  }
+  .btn-pdf{
+    color: var(--primaryColor) !important;
+    border-radius: 0% !important;
+    border: 1px solid var(--primaryColor) !important;
   }
   .contact:hover {
     transform: scale(1) !important;
@@ -689,6 +699,11 @@ input.form-control {
   .m-only {
     display: none !important;
   }
+  .btn-pdf{
+    color: white !important;
+    border-radius: 0% !important;
+    border: 1px solid #fff !important;
+  }
   .nav-item button {
     font-size: 38px;
   }
@@ -804,6 +819,11 @@ input.form-control {
   .m-only {
     display: none !important;
   }
+  .btn-pdf{
+    color: white !important;
+    border-radius: 0% !important;
+    border: 1px solid #fff !important;
+  }
   .landing {
     height: 100vh;
     margin: 0 0 10rem;
@@ -879,6 +899,11 @@ input.form-control {
 @media only screen and (min-width: 2560px) {
   .m-only {
     display: none !important;
+  }
+  .btn-pdf{
+    color: white !important;
+    border-radius: 0% !important;
+    border: 1px solid #fff !important;
   }
   nav a:not(nav .nav-link.contact) {
     font-size: 2rem !important;
