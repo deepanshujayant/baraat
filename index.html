@@ -123,23 +123,103 @@
           </ul>
         </div>
       </nav>
-      <section id="home" class="landing background-tint landing-bkg-container">
-        <div class="l-container h-100">
-          <div class="l-content">
-            <div class="title text-white pl-4">
-              <p class="text-uppercase mb-1">baraat brings you</p>
-              <h1 class="mt-0" style="font-size: 88px">
-                Bespoke <br />
-                Caterings
-              </h1>
-              <p class="text-uppercase dynamic-text">test</p>
+
+      <section id="home" class="landing">
+        <div class="swiper h-100 landing-swiper">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide l-container h-100 background-tint"
+              style="background-image: url('./resources/img/landing1.png')"
+            >
+              <div class="l-content">
+                <div class="title text-white">
+                  <p class="text-uppercase mb-0" style="font-size: 1.5rem">
+                    baraat brings you
+                  </p>
+                  <h1 class="mt-0" style="font-size: 7.5rem">
+                    Bespoke <br />
+                    Caterings
+                  </h1>
+                  <p
+                    class="text-uppercase dynamic-text mt-2"
+                    style="font-size: 1.75rem"
+                  >
+                    Corporate Buffets
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide l-container h-100 background-tint"
+              style="background-image: url('./resources/img/landing2.png')"
+            >
+              <div class="l-content">
+                <div class="title text-white">
+                  <p class="text-uppercase mb-0" style="font-size: 1.5rem">
+                    baraat brings you
+                  </p>
+                  <h1 class="mt-0" style="font-size: 7.5rem">
+                    Bespoke <br />
+                    Caterings
+                  </h1>
+                  <p
+                    class="text-uppercase dynamic-text mt-2"
+                    style="font-size: 1.75rem"
+                  >
+                    Sit Down Dinners
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide l-container h-100 background-tint"
+              style="background-image: url('./resources/img/landing3.png')"
+            >
+              <div class="l-content">
+                <div class="title text-white">
+                  <p class="text-uppercase mb-0" style="font-size: 1.5rem">
+                    baraat brings you
+                  </p>
+                  <h1 class="mt-0" style="font-size: 7.5rem">
+                    Bespoke <br />
+                    Caterings
+                  </h1>
+                  <p
+                    class="text-uppercase dynamic-text mt-2"
+                    style="font-size: 1.75rem"
+                  >
+                    Family Get-togethers
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="swiper-slide l-container h-100 background-tint"
+              style="background-image: url('./resources/img/landing4.png')"
+            >
+              <div class="l-content">
+                <div class="title text-white">
+                  <p class="text-uppercase mb-0" style="font-size: 1.5rem">
+                    baraat brings you
+                  </p>
+                  <h1 class="mt-0" style="font-size: 7.5rem">
+                    Bespoke <br />
+                    Caterings
+                  </h1>
+                  <p
+                    class="text-uppercase dynamic-text mt-2"
+                    style="font-size: 1.75rem"
+                  >
+                    Special Occasions
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="mb-3 mx-lg-3 text-center l-thumbnails">
-            <div class="d-flex justify-content-around landing-container"></div>
-          </div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
+
       <section id="our-story" class="story">
         <div class="position-relative bg-beige story-container h-100">
           <div class="container h-100">
@@ -200,46 +280,141 @@
       </section>
 
       <section id="decor" class="decor">
-        <div class="position-relative decor-container">
-          <div class="d-flex">
-            <div class="bg-beige w-25 vh-100 position-relative">
-              <div class="square-elem position-absolute"></div>
-            </div>
-            <div class="h-100 w-75 decor-content">
-              <h1 class="heading text-white">Decor</h1>
-              <br />
-              <div class="decor-swiper-container">
-                <!-- Swiper -->
-                <div class="swiper mx-4 decor-swiper">
-                  <div class="swiper-wrapper"></div>
+        <div class="tab-container overflow-auto">
+          <ul
+            class="nav justify-content-around nav-tabs"
+            id="myTab"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="buffet-tab"
+                data-toggle="tab"
+                data-target="#buffet"
+                type="button"
+                role="tab"
+              >
+                Buffet Setup
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="plating-tab"
+                data-toggle="tab"
+                data-target="#plating"
+                type="button"
+                role="tab"
+              >
+                Plating
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="food-gallery-tab"
+                data-toggle="tab"
+                data-target="#food-gallery"
+                type="button"
+                role="tab"
+              >
+                Food Gallery
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="more-images-tab"
+                data-toggle="tab"
+                data-target="#more-images"
+                type="button"
+                role="tab"
+              >
+                More from catering
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="buffet"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+          >
+            <div class="buffet-container">
+              <div class="h-100 buffet-content">
+                <br />
+                <div class="buffet-swiper-container">
+                  <!-- Swiper -->
+                  <div class="swiper h-100 mx-4 buffet-swiper">
+                    <div class="swiper-wrapper"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="gallery">
-        <div class="d-flex h-100 justify-content-center align-items-center">
-          <div class="container gallery-container">
-            <div class="title-container position-relative">
-              <div class="title">
-                <h1 class="text-white text-center">Food Gallery</h1>
+          <div
+            class="tab-pane fade"
+            id="plating"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+          >
+            <div class="plate-container">
+              <div class="h-100 plate-content">
+                <br />
+                <div class="plate-swiper-container">
+                  <!-- Swiper -->
+                  <div class="swiper h-100 mx-4 plate-swiper">
+                    <div class="swiper-wrapper"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                </div>
               </div>
-              <div class="square-elem position-absolute"></div>
             </div>
-            <div class="m-images-container m-only">
-              <br />
-              <div class="images1"></div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="food-gallery"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <div class="gallery-container">
+              <div class="h-100 gallery-content">
+                <br />
+                <div class="gallery-swiper-container">
+                  <!-- Swiper -->
+                  <div class="swiper h-100 mx-4 gallery-swiper">
+                    <div class="swiper-wrapper"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="m-images-container m-only">
-              <br />
-              <div class="images2"></div>
-            </div>
-            <div class="images-container d-only">
-              <div class="row"></div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="more-images"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <div class="catering-container">
+              <div class="h-100 catering-content">
+                <br />
+                <div class="catering-swiper-container">
+                  <!-- Swiper -->
+                  <div class="swiper h-100 mx-4 catering-swiper">
+                    <div class="swiper-wrapper"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -963,6 +1138,7 @@
           </div>
         </div>
       </section>
+
       <section class="contact-us">
         <div
           class="d-flex h-100 contact-container justify-content-between align-items-center"
@@ -1023,6 +1199,7 @@
           </div>
         </div>
       </section>
+
       <footer class="footer bg-beige p-2">
         <div
           class="d-flex flex-column justify-content-center align-items-center w-100"
@@ -1065,6 +1242,102 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script>
+      var decorSwiper = new Swiper(".buffet-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            slidesPerColumn: 2,
+          },
+
+          500: {
+            slidesPerView: 2,
+          },
+          868: {
+            slidesPerView: 4,
+          },
+        },
+      });
+      var decorSwiper = new Swiper(".plate-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            slidesPerColumn: 2,
+          },
+
+          500: {
+            slidesPerView: 2,
+          },
+          868: {
+            slidesPerView: 4,
+          },
+        },
+      });
+      var decorSwiper = new Swiper(".gallery-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            slidesPerColumn: 2,
+          },
+
+          500: {
+            slidesPerView: 2,
+          },
+          868: {
+            slidesPerView: 4,
+          },
+        },
+      });
+      var decorSwiper = new Swiper(".catering-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            slidesPerColumn: 2,
+          },
+
+          500: {
+            slidesPerView: 2,
+          },
+          868: {
+            slidesPerView: 4,
+          },
+        },
+      });
+      var swiper = new Swiper(".landing-swiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
       var swiper = new Swiper(".instaSlider", {
         slidesPerView: 3,
         spaceBetween: 20,
@@ -1108,27 +1381,6 @@
           },
           2560: {
             spaceBetween: 300,
-          },
-        },
-      });
-      var decorSwiper = new Swiper(".decor-swiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-            slidesPerColumn: 2,
-          },
-
-          500: {
-            slidesPerView: 2,
-          },
-          868: {
-            slidesPerView: 3,
           },
         },
       });
@@ -1194,44 +1446,50 @@
           $("main").show();
         }, 1500);
         populateMedia("landing", "landing-container", 4);
-        populateMedia("gallery", "images-container", 8);
-        populateMedia("gallery", "m-images-container", 8);
-        populateMedia("decor", "decor-swiper-container", 8);
+        populateMedia("buffet", "buffet-swiper-container", 4);
+        populateMedia("plate", "plate-swiper-container", 11);
+        populateMedia("gallery", "gallery-swiper-container", 8);
+        populateMedia("catering", "catering-swiper-container", 3);
         populateMedia("testimonials", "testimonial-swiper", 4);
         initializeLanding();
       });
       function populateMedia(type, container, total) {
-        console.log("i m called");
         if (type == "gallery") {
-          for (let index = 1; index < total + 1; index++) {
-            $(`.${container}`).find(".row").append(`
-              <div class="col-lg-3 mb-4 col-md-3 col-sm-1">
-                <div class="food-image">
-                  <img src="../resources/img/food${index}.png" alt="IMAGE ${index}" class="img-fluid bg-main">
-                </div>
-              </div>
-            `);
-          }
-          for (let index = 1; index < total / 2 + 1; index++) {
-            $(`.${container}`).find(".images1").append(`
-                <div class="food-image">
-                  <img src="../resources/img/food${index}.png" alt="IMAGE ${index}" class="img-fluid bg-main">
-                </div>
-            `);
-          }
-          for (let index = total / 2 + 1; index < total + 1; index++) {
-            $(`.${container}`).find(".images2").append(`
-                <div class="food-image">
-                  <img src="../resources/img/food${index}.png" alt="IMAGE ${index}" class="img-fluid bg-main">
-                </div>
-            `);
-          }
-        } else if (type == "decor") {
           for (let index = 1; index < total + 1; index++) {
             $(`.${container}`).find(".swiper-wrapper").append(`
               <div class="swiper-slide"
                 <div class="food-image">
-                  <img src="../resources/img/decor${index}.png" alt="IMAGE ${index}" class="img-fluid bg-main">
+                  <img src="../resources/img/Food/food${index}.png" alt="IMAGE ${index}" class="img-fluid bg-main">
+                </div>
+              </div>
+            `);
+          }
+        } else if (type == "buffet") {
+          for (let index = 1; index < total + 1; index++) {
+            $(`.${container}`).find(".swiper-wrapper").append(`
+              <div class="swiper-slide"
+                <div class="food-image">
+                  <img src="../resources/img/Bufet/bufet${index}.png" alt="IMAGE ${index}" class="img-fluid bg-main">
+                </div>
+              </div>
+            `);
+          }
+        } else if (type == "plate") {
+          for (let index = 1; index < total + 1; index++) {
+            $(`.${container}`).find(".swiper-wrapper").append(`
+              <div class="swiper-slide"
+                <div class="food-image">
+                  <img src="../resources/img/Plating/plate${index}.png" alt="IMAGE ${index}" class="img-fluid bg-main">
+                </div>
+              </div>
+            `);
+          }
+        } else if (type == "catering") {
+          for (let index = 1; index < total + 1; index++) {
+            $(`.${container}`).find(".swiper-wrapper").append(`
+              <div class="swiper-slide"
+                <div class="food-image">
+                  <img src="../resources/img/Catering/catering${index}.png" alt="IMAGE ${index}" class="img-fluid bg-main">
                 </div>
               </div>
             `);

@@ -22,6 +22,7 @@ h1 {
 }
 
 nav,
+.nav-item,
 .landing {
   font-family: "Playfair Display", serif !important;
 }
@@ -120,7 +121,10 @@ input.form-control {
   border-radius: 50%;
 }
 .l-container {
+  text-align: center;
+  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .l-content {
@@ -164,6 +168,9 @@ input.form-control {
   right: 51% !important;
   left: auto !important;
 }
+.landing-swiper .swiper-pagination-bullet {
+  background: white !important;
+}
 .landing-container .swiper-button-prev {
   left: 10px;
   right: auto !important;
@@ -172,11 +179,13 @@ input.form-control {
   left: 70px;
   right: auto !important;
 }
-.decor-swiper-container .swiper-button-prev {
+.tab-content .swiper-button-prev {
+  /* bottom: -10% !important; */
   right: 51% !important;
   left: auto !important;
 }
-.decor-swiper-container .swiper-button-next {
+.tab-content .swiper-button-next {
+  /* bottom: -10% !important; */
   left: 51% !important;
   right: auto !important;
 }
@@ -255,6 +264,18 @@ input.form-control {
 @media only screen and (max-width: 600px) {
   .d-only {
     display: none !important;
+  }
+  .nav-tabs {
+    width: 135vw;
+  }
+  .buffet-swiper-container,
+  .plate-swiper-container,
+  .gallery-swiper-container,
+  .catering-swiper-container {
+    height: 75vh !important;
+  }
+  .tab-content .swiper-wrapper {
+    height: 75% !important;
   }
   .contact:hover {
     transform: scale(1) !important;
@@ -590,17 +611,55 @@ input.form-control {
     padding: 2rem 1rem !important;
   }
 }
+.nav-item > button {
+  color: #878787 !important;
+}
+.nav-tabs {
+  border-width: 2px !important;
+  border-color: var(--secondaryColor) !important;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: white !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  border-bottom: 5px solid var(--secondaryColor) !important;
+}
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+  color: white !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  border-bottom: 5px solid var(--secondaryColor) !important;
+}
+.custom-nav-tabs {
+  border-bottom: 2px solid var(--secondaryColor) !important;
+}
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .m-only {
     display: none !important;
   }
+  .nav-item button {
+    font-size: 38px;
+  }
+  .buffet-swiper-container,
+  .plate-swiper-container,
+  .gallery-swiper-container,
+  .catering-swiper-container {
+    height: 75vh !important;
+  }
+  .tab-content .swiper-wrapper {
+    height: 75% !important;
+  }
   .landing {
     height: 100vh;
     margin: 0 0 10rem;
     /* border: 1px dashed white; */
   }
+
   .gallery {
     margin: 2rem 0 5rem;
     min-height: 100vh;
