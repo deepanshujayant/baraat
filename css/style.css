@@ -259,7 +259,7 @@ input.form-control {
 }
 
 .review-card .review {
-  height: 175px;
+  min-height: 175px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -361,7 +361,7 @@ input.form-control {
   }
   .story {
     margin: 2rem 0 3rem;
-    height: 150vh;
+    height: 62rem;
   }
   .testimonials {
     margin: 2rem 0 3rem;
@@ -459,7 +459,7 @@ input.form-control {
   }
 
   .review-card .review {
-    height: 175px !important;
+    min-height: 175px !important;
   }
 
   .contact-container {
